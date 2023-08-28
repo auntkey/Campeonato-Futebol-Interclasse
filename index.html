@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
     <style>
+
+        
         @font-face {
             font-family: 'Poppins';
             src: url('path/to/poppins.woff2') format('woff2'),
@@ -15,244 +18,177 @@
             font-style: normal;
         }
 
-        body {
-            font-family: 'Poppins';
-            
-           
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            list-style: none;
 
+        }
+
+        body {
+            background-color: antiquewhite;
         }
 
         header {
-           text-align: center
+            background-color: rgb(254, 254, 254);
+            display: flex;
+            align-items: center;
+            padding-top: 8px;
+            padding-bottom: 6px;
+            padding-left: 60px;
+            border-top: solid;
+            border-color: rgb(218, 27, 27);
         }
 
-        .texto {
+        ul{
             display: flex;
-            flex-direction: column;
-            text-align: center;
+            padding-left: 5rem;
+        }
+
+        li{
+            margin: 2rem;
+        }
+
+        a{
+            color: black;
+            font-weight: bolder;
+        }
+
+        a:link{
+            text-decoration: none;
+        }
+
+        a:hover{
+            background-color: rgb(218, 27, 27);
+            margin: 0px;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         img {
-            text-align: center;
-            width: 25%;
-            height: 100%;
+            max-height: 5rem;
         }
 
-        h1 {
-            margin: auto;
-            padding: 30px;
-        }
-
-        h2 {
-            margin: 0;
-            padding: 0;
-        }
-
-        h4 {
-            margin: 0;
-            padding: 0;
-        }
-        
-        h5{
-            margin: 40;
-            padding: 5;
-            line-height: 100px;
-        }
-        
-        main {
-            width: 1000px;
-            text-align: center;
-            border: 0px;
-            margin: auto;
-            
-        }
-
-        .column-wrapper {
-            margin-left: 80px;
-            margin-right: 80px;
+        main{
+            background-color: rgb(159, 16, 16);
             display: flex;
-            text-align: center;
-            justify-content: space-between;
-            padding-top: 40px;
-            padding-bottom: 80px;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+            background: url(https://www.unipar.br/media/images/boy-kicking-a-ball-with-bare-.2e16d0ba.fill-1200x630-c60.jpg);
+            background-size: cover;
             
         }
 
-        .column {
-            flex-basis: 50%;
-            text-align: center;
-            margin-right: 0px;
-            margin-left: 0px;
-            width: 400px;
+        h1{
+            font-size: 2vw;
         }
 
-        
-        .grupos {
-  color: white;
-  padding: 5px;
-  display: inline-block;
-  background-color: rgb(0, 0, 128);
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  width:200px;
-   
-            
-}
-    
+        h2{
+            font-size: 2vw;
+            padding:1rem;
+            line-height: 50px;
+            color: white;
+        }
 
-        .rank {
+        h4{
+            font-size: 1vw;
+        }
 
-  display: inline-block;
-  background-color: rgb(195, 195, 200);
-  color: white;
-  padding: 5px;
-  padding-right: 15px;
-  padding-left: 15px;
-  border-radius: 5px;
-  text-align: center;
-  width:40px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-            
-}
-
-
-
-
-        .pontos {
-            color: red;
-            font-weight: bold;
+        .rank, .grupos, .pontos{
             display: inline-block;
-            background-color: red;
+            background-color: rgb(0, 0, 0);
             color: white;
             padding: 5px;
+            margin: 3px;
             border-radius: 5px;
             text-align: center;
-            width:100px;
-            
-            
-            
+            width: 4vw;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.44);
         }
         
-        .ranking{
-            position: relative;
-            background-color: orange;
-            width: 1000px;
-            margin: auto;
-            border-radius: 15px;
-            
-        
-        }
-        
-            p {
-            margin: 7px;
-            padding: 0;
-            font-size: 16px;
-            line-height: 1.5;
-            display: block;
-            width: 400px
+        .rank{
             
         }
-        
-        
-.button-box {
-	width: 150px;
-	margin: 5px auto;
-	position: relative;
-	border-radius: 30px;
-	background: #fff
-}
 
-.toggle-btn {
-	padding: 10px 10px;
-	cursor: pointer;
-	background: transparent;
-	border: 5px;
-	outline: none;
-	position: relative;
-	text-align: center;
-    
-    
-}
+        .grupos{
+            width: 40vw;
+            background-color: rgb(254, 254, 254);
+            color: rgb(255, 255, 255);
+            background: transparent;
+            backdrop-filter: blur(6px);
+            border: 2px solid rgb(195, 195, 195);
+            
+        }
 
-#btn {
-	left: 0;
-	top: 0;
-	position: absolute;
-    margin: auto;
-    margin-left: 0px;
-	width: 80px;
-	height: 100%;
-	background: #e67e22;
-	border-radius: 30px;
-	transition: .5s;
-    
-}
+        .pontos{
+            width: 12vw;
+            background-color: rgb(0, 0, 0);
+            
+        }
+
+        .fstplace{
+            background-color: rgb(255, 204, 0);
+            color:rgb(0, 0, 0);
+            box-shadow: inset 0px 0px 17px 3px rgb(255, 248, 184);
+        }
+
+        .sndplace{
+            background-color: rgb(187, 187, 187);
+            color:rgb(0, 0, 0);
+            box-shadow: inset 0px 0px 17px 3px rgba(255, 255, 255, 1);
+        }
         
+        .tdhplace{
+            background-color: rgb(219, 128, 9);
+            color:rgb(0, 0, 0);
+            box-shadow: inset 0px 0px 17px 3px rgb(255, 181, 69);
+        }
+
         footer{
-        
-        text-align:center;
-            margin:auto;
+            padding: 30px;
+            display: flex;
         }
-        
-        
     </style>
 </head>
-    
-    
+
 <body onload="abir()">
-    
-    
-    
-    <div class= "ranking">
+
     <header>
-        
+        <img src="https://www.escolaruybarbosa.com.br/wp-content/uploads/2021/05/marca.png" alt="logo da escola">
         <div class="texto">
-        
-                <h1>Campeonato de futebol interclasse</h1>
-      
+            <h1>Campeonato de futebol interclasse</h1>
+            <h4>Vida ativa: setembro amarelo e a transformação através do movimento.</h4>
         </div>
-        
-        <div class="form-box">
-		<div class="button-box">
-			<div id="btn"></div>
-			<button type="button" class="toggle-btn" onclick="leftClick()">Ranking</button>
-			<button type="button" class="toggle-btn" onclick="rightClick()">  Divisões</button>
-		</div>
-	   </div>
-        
+        <ul>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Ranking</a></li>
+            <li><a href="">Divisões</a></li>
+            <li><a href="">Participantes</a></li>
+        </ul>
     </header>
-    
+
     <main>
-        <div class="column-wrapper">
-            <div class="column" id="column1"></div>
-            <div class="column" id="column2"></div>
+        <div class="titulo">
+            <h2>ranking</h2>
         </div>
-        <div class="textinho">
-            <h5>"Vida ativa: setembro amarelo e a transformação através do movimento."</h5>
-        </div>
+        
+        <div class="column" id="column1"></div>
+        
     </main>
-    </div> 
+
     <footer>
-        <h2>Narração ao Vivo</h2>
-        <div style="left:20rem; text-align:center; width: 100%;margin-height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/rUxyKA_-grg?rel=0" style="top: 0; left: 0; width: 50%; height: 50%; position: absolute;text-align:center; border: 0;" allowfullscreen scrolling="no" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"></iframe></div>
+        <box-icon type='logo' name='instagram-alt'></box-icon>
+        <a href="">visite nosso instagram</a>
+
     </footer>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script>
-        
-        var btn = document.getElementById('btn')
-
-function leftClick() {
-	btn.style.left = '0'
-}
-
-function rightClick() {
-	btn.style.left = '70px'
-}
-        
-        
         function abir() {
-            var grupos = [
+    var grupos = [
                 { grupo: "grupo 1", pontos: 3 },
                 { grupo: "grupo 2", pontos: 5 },
                 { grupo: "grupo 3", pontos: 1 },
@@ -263,29 +199,38 @@ function rightClick() {
                 { grupo: "grupo 8", pontos: 1 },
                 { grupo: "grupo 9", pontos: 1 },
                 { grupo: "grupo 10", pontos: 1 },
-                { grupo: "grupo 11", pontos: 11 },
+                { grupo: "grupo 11", pontos: 1 },
                 { grupo: "grupo 12", pontos: 1 },
                 { grupo: "grupo 13", pontos: 1 },
                 { grupo: "grupo 14", pontos: 1 },
                 { grupo: "grupo 15", pontos: 1 },
                 { grupo: "grupo 16", pontos: 0 },
-            ];
-            grupos.sort(function(a, b) {
-                return b.pontos - a.pontos;
-            });
+    ];
+    grupos.sort(function(a, b) {
+        return b.pontos - a.pontos;
+    });
 
-            var column1 = document.getElementById("column1");
-            var column2 = document.getElementById("column2");
+    var column1 = document.querySelector(".column");
+    var htmlToAdd = "";  
 
-            for (var i = 0; i < grupos.length; i++) {
+    for (var i = 0; i < grupos.length; i++) {
                 var rank = i + 1;
-                var grupoHTML = "<p><span class='rank'>" + rank + ".</span> <span class='grupos skewed-shape'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
-                if (i < grupos.length / 2) {
-                    column1.innerHTML += grupoHTML;
-                } else {
-                    column2.innerHTML += grupoHTML;
+                var grupoHTML = "<p><span class='rank'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
+                
+                if (i === 0) {
+                    grupoHTML = "<p><span class='rank fstplace'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
+                } else if (i === 1) {
+                    grupoHTML = "<p><span class='rank sndplace'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
+                } else if (i === 2) {
+                    grupoHTML = "<p><span class='rank tdhplace'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
                 }
+                
+                htmlToAdd += grupoHTML;
             }
+
+            column1.innerHTML = htmlToAdd;
         }
+
     </script>
 </body>
+</html>

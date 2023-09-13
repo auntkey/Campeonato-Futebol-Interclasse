@@ -9,6 +9,8 @@
 
     <style>
 
+    
+
         
         @font-face {
             font-family: 'Poppins';
@@ -109,13 +111,30 @@
             width: 4vw;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.44);
         }
+
+        .rk{
+            display: flex;
+            padding: 50px;
+            text-align: center;
+
+        }
+
+        .column{
+            padding: 10px;
+
+        }
+
+        .column2{
+            padding: 10px;
+ 
+        }
         
         .rank{
             
         }
 
         .grupos{
-            width: 40vw;
+            width: 20vw;
             background-color: rgb(254, 254, 254);
             color: rgb(255, 255, 255);
             background: transparent;
@@ -152,6 +171,69 @@
             padding: 30px;
             display: flex;
         }
+
+        .m{
+            display: flex;
+            flex-direction: column;
+        }
+        .f{
+            display: flex;
+            flex-direction: column;
+        }
+        @media screen and (max-width: 600px){
+
+            header{
+                width: 100vw;
+                padding: 10px;
+            }
+
+            ul{
+                display: none;
+            }
+
+            h1{
+                font-size: 3.4vw;
+            }
+            h4{
+                font-size: 2vw;
+            }
+
+            img{
+                max-height: 30px;
+            }
+            h2{
+                font-size: 5vw;
+                padding: 5px;
+                height: 40px;
+            }
+
+            .rk{
+                padding: 5px;
+            }
+
+            .grupos, .pontos, .rank{
+                font-size: 12px; 
+            }
+
+            .column, .column2{
+                padding: 0px;
+                padding-top: 5px;
+            }
+
+            .pontos{
+                width: 30px;
+                height: 29px;
+                overflow: hidden;
+                line-height: -3px;
+        }
+            .grupos{
+                width: 120px;
+            }
+            
+            p{
+                display: flex;
+                justify-content: center;
+            }
     </style>
 </head>
 
@@ -176,7 +258,16 @@
             <h2>ranking</h2>
         </div>
         
-        <div class="column" id="column1"></div>
+        <container class="rk">
+            <div class="m">
+                <h2>Masculino</h2>
+                <div class="column" id="column1"></div>
+            </div>
+            <div class="f">
+                <h2>Feminino</h2>
+                <div class="column2" id="column2"></div>
+            </div>
+        </container>
         
     </main>
 
@@ -188,35 +279,42 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script>
         function abir() {
+
     var grupos = [
-                { grupo: "grupo 1", pontos: 3 },
-                { grupo: "grupo 2", pontos: 5 },
-                { grupo: "grupo 3", pontos: 1 },
-                { grupo: "grupo 4", pontos: 0 },
-                { grupo: "grupo 5", pontos: 1 },
-                { grupo: "grupo 6", pontos: 1 },
-                { grupo: "grupo 7", pontos: 1 },
-                { grupo: "grupo 8", pontos: 1 },
-                { grupo: "grupo 9", pontos: 1 },
-                { grupo: "grupo 10", pontos: 1 },
-                { grupo: "grupo 11", pontos: 1 },
-                { grupo: "grupo 12", pontos: 1 },
-                { grupo: "grupo 13", pontos: 1 },
-                { grupo: "grupo 14", pontos: 1 },
-                { grupo: "grupo 15", pontos: 1 },
-                { grupo: "grupo 16", pontos: 0 },
-    ];
+                { grupo: "França", pontos: 0 },
+                { grupo: "Brasil", pontos: 0 },
+                { grupo: "Portugal", pontos: 0 },
+                { grupo: "Inglaterra", pontos: 0 },
+                { grupo: "Alemanha", pontos: 0 },
+                { grupo: "Argentina", pontos: 0 },
+                { grupo: "Itália", pontos: 0 }       
+                ];
+
+    var gruposF = [
+                { grupo: "As Combatentes", pontos: 0 },
+                { grupo: "As Artilheiras", pontos: 0 },
+                { grupo: "As Indestrutíveis", pontos: 0 },
+                { grupo: "As Malvadas", pontos: 0 },
+                { grupo: "sem nome", pontos: 0 },
+                ];
+
     grupos.sort(function(a, b) {
         return b.pontos - a.pontos;
     });
 
-    var column1 = document.querySelector(".column");
-    var htmlToAdd = "";  
+    gruposF.sort(function(a, b) {
+        return b.pontos - a.pontos;
+    });
+
+    var column1 = document.querySelector("#column1");
+    var column2 = document.querySelector("#column2"); 
+    var htmlToAdd1 = "";
+    var htmlToAdd2 = "";
 
     for (var i = 0; i < grupos.length; i++) {
                 var rank = i + 1;
                 var grupoHTML = "<p><span class='rank'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
-                
+
                 if (i === 0) {
                     grupoHTML = "<p><span class='rank fstplace'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
                 } else if (i === 1) {
@@ -224,13 +322,28 @@
                 } else if (i === 2) {
                     grupoHTML = "<p><span class='rank tdhplace'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
                 }
-                
-                htmlToAdd += grupoHTML;
+
+                htmlToAdd1 += grupoHTML;
             }
 
-            column1.innerHTML = htmlToAdd;
-        }
+            for (var i = 0; i < gruposF.length; i++) {
+                var rank = i + 1;
+                var grupoHTML = "<p><span class='rank'>" + rank + ".</span> <span class='grupos'>" + gruposF[i].grupo + ":</span> <span class='pontos'>" + gruposF[i].pontos + " pontos</span></p>";
 
+                if (i === 0) {
+                    grupoHTML = "<p><span class='rank fstplace'>" + rank + ".</span> <span class='grupos'>" + gruposF[i].grupo + ":</span> <span class='pontos'>" + gruposF[i].pontos + " pontos</span></p>";
+                } else if (i === 1) {
+                    grupoHTML = "<p><span class='rank sndplace'>" + rank + ".</span> <span class='grupos'>" + gruposF[i].grupo + ":</span> <span class='pontos'>" + gruposF[i].pontos + " pontos</span></p>";
+                } else if (i === 2) {
+                    grupoHTML = "<p><span class='rank tdhplace'>" + rank + ".</span> <span class='grupos'>" + gruposF[i].grupo + ":</span> <span class='pontos'>" + gruposF[i].pontos + " pontos</span></p>";
+                }
+
+                htmlToAdd2 += grupoHTML;
+            }
+
+            column1.innerHTML = htmlToAdd1;
+            column2.innerHTML = htmlToAdd2;
+        }
     </script>
 </body>
 </html>

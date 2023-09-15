@@ -13,7 +13,7 @@ var grupos = [
 var gruposF = [
         { grupo: "As Combatentes", pontos: 0 },
         { grupo: "As Artilheiras", pontos: 2 },
-        { grupo: "As Indestrutíveis", pontos: 2 },
+        { grupo: "As Indestrutíveis", pontos: 3 },
         { grupo: "As Malvadas", pontos: 0 },
         { grupo: "As REvolucionárias", pontos: 1 },
         ];

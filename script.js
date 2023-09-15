@@ -12,10 +12,10 @@ var grupos = [
 
 var gruposF = [
         { grupo: "As Combatentes", pontos: 0 },
-        { grupo: "As Artilheiras", pontos: 1 },
-        { grupo: "As Indestrutíveis", pontos: 1 },
+        { grupo: "As Artilheiras", pontos: 2 },
+        { grupo: "As Indestrutíveis", pontos: 2 },
         { grupo: "As Malvadas", pontos: 0 },
-        { grupo: "sem nome", pontos: 0 },
+        { grupo: "As REvolucionárias", pontos: 1 },
         ];
 
 grupos.sort(function(a, b) {

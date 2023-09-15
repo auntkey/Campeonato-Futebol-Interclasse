@@ -234,6 +234,7 @@ footer{
         justify-content: center;
     }
     .finais{
+        padding: 30px;
         width: 400px;
     }
 }

@@ -2,11 +2,11 @@ function abir() {
 
     var grupos = [
             { grupo: "França", pontos: 0 },
-            { grupo: "Brasil", pontos: 0 },
+            { grupo: "Brasil", pontos: 1 },
             { grupo: "Portugal", pontos: 0 },
-            { grupo: "Inglaterra", pontos: 0 },
+            { grupo: "Inglaterra", pontos: 2 },
             { grupo: "Alemanha", pontos: 0 },
-            { grupo: "Argentina", pontos: 0 },
+            { grupo: "Argentina", pontos: 3 },
             { grupo: "Itália", pontos: 0 }       
             ];
     

@@ -15,7 +15,7 @@ var gruposF = [
         { grupo: "As Artilheiras", pontos: 2 },
         { grupo: "As Indestrutíveis", pontos: 3 },
         { grupo: "As Malvadas", pontos: 0 },
-        { grupo: "As REvolucionárias", pontos: 1 },
+        { grupo: "As Revolucionárias", pontos: 1 },
         ];
 
 grupos.sort(function(a, b) {

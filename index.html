@@ -6,235 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-
-    <style>
-
-    
-
-        
-        @font-face {
-            font-family: 'Poppins';
-            src: url('path/to/poppins.woff2') format('woff2'),
-                url('path/to/poppins.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            list-style: none;
-
-        }
-
-        body {
-            background-color: antiquewhite;
-        }
-
-        header {
-            background-color: rgb(254, 254, 254);
-            display: flex;
-            align-items: center;
-            padding-top: 8px;
-            padding-bottom: 6px;
-            padding-left: 60px;
-            border-top: solid;
-            border-color: rgb(218, 27, 27);
-        }
-
-        ul{
-            display: flex;
-            padding-left: 5rem;
-        }
-
-        li{
-            margin: 2rem;
-        }
-
-        a{
-            color: black;
-            font-weight: bolder;
-        }
-
-        a:link{
-            text-decoration: none;
-        }
-
-        a:hover{
-            background-color: rgb(218, 27, 27);
-            margin: 0px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        img {
-            max-height: 5rem;
-        }
-
-        main{
-            background-color: rgb(159, 16, 16);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 10px;
-            padding-bottom: 50px;
-            background: url(https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2019/07/futebol1.jpg);
-            background-size: cover;
-            
-        }
-
-        h1{
-            font-size: 2vw;
-        }
-
-        h2{
-            font-size: 2vw;
-            padding:1rem;
-            line-height: 50px;
-            color: white;
-        }
-
-        h4{
-            font-size: 1vw;
-        }
-
-        .rank, .grupos, .pontos{
-            display: inline-block;
-            background-color: rgb(0, 0, 0);
-            color: white;
-            padding: 5px;
-            margin: 3px;
-            border-radius: 5px;
-            text-align: center;
-            width: 4vw;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.44);
-        }
-
-        .rk{
-            display: flex;
-            padding: 50px;
-            text-align: center;
-
-        }
-
-        .column{
-            padding: 10px;
-
-        }
-
-        .column2{
-            padding: 10px;
- 
-        }
-        
-        .rank{
-            
-        }
-
-        .grupos{
-            width: 20vw;
-            background-color: rgb(254, 254, 254);
-            color: rgb(255, 255, 255);
-            background: transparent;
-            backdrop-filter: blur(6px);
-            border: 2px solid rgb(195, 195, 195);
-            
-        }
-
-        .pontos{
-            width: 12vw;
-            background-color: rgb(0, 0, 0);
-            
-        }
-
-        .fstplace{
-            background-color: rgb(255, 204, 0);
-            color:rgb(0, 0, 0);
-            box-shadow: inset 0px 0px 17px 3px rgb(255, 248, 184);
-        }
-
-        .sndplace{
-            background-color: rgb(187, 187, 187);
-            color:rgb(0, 0, 0);
-            box-shadow: inset 0px 0px 17px 3px rgba(255, 255, 255, 1);
-        }
-        
-        .tdhplace{
-            background-color: rgb(219, 128, 9);
-            color:rgb(0, 0, 0);
-            box-shadow: inset 0px 0px 17px 3px rgb(255, 181, 69);
-        }
-
-        footer{
-            padding: 30px;
-            display: flex;
-        }
-
-        .m{
-            display: flex;
-            flex-direction: column;
-        }
-        .f{
-            display: flex;
-            flex-direction: column;
-        }
-        @media screen and (max-width: 600px){
-
-            header{
-                width: 100vw;
-                padding: 10px;
-            }
-
-            ul{
-                display: none;
-            }
-
-            h1{
-                font-size: 3.4vw;
-            }
-            h4{
-                font-size: 2vw;
-            }
-
-            img{
-                max-height: 30px;
-            }
-            h2{
-                font-size: 5vw;
-                padding: 5px;
-                height: 40px;
-            }
-
-            .rk{
-                padding: 5px;
-            }
-
-            .grupos, .pontos, .rank{
-                font-size: 12px; 
-            }
-
-            .column, .column2{
-                padding: 0px;
-                padding-top: 5px;
-            }
-
-            .pontos{
-                width: 30px;
-                height: 29px;
-                overflow: hidden;
-                line-height: -3px;
-        }
-            .grupos{
-                width: 120px;
-            }
-            
-            p{
-                display: flex;
-                justify-content: center;
-            }
-    </style>
+    <link href="./style.css" rel="stylesheet">
 </head>
 
 <body onload="abir()">
@@ -255,7 +27,7 @@
 
     <main>
         <div class="titulo">
-            <h2>ranking</h2>
+            <h2>Ranking</h2>
         </div>
         
         <container class="rk">
@@ -268,6 +40,32 @@
                 <div class="column2" id="column2"></div>
             </div>
         </container>
+        <container class="divisões">
+            <div class="titulo">
+                <h2>Divisões</h2>
+            </div>
+            <div class="finais">
+                <div class="finalistas">
+                    <h2>Finais</h2>
+                    <h3>As Artilheiras x As Indestrutíveis</h3>
+                </div>
+                <div class="finalistas3">
+                    <h2> Disputa 3º Lugar </h2>
+                    <h3> As Combatentes x As Revolucionárias</h3>
+                </div>
+            </div>
+        </container>
+        <container class="placar_semanal">
+            <div class="titulo">
+                <h2>Placar Semanal</h2>
+            </div>
+            <div class="placar1">
+                <h2>1º jogo</h2>
+                <h3>As combatentes 1 x 3 As artilheiras</h3>
+                <h2>2º jogo</h2>
+                <h3>As indestrutíveis 3 x 2 As revolucionárias</h3>
+            </div>
+        </container>
         
     </main>
 
@@ -277,73 +75,9 @@
 
     </footer>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script>
-        function abir() {
+    <script src="./script.js"></script>
+</body>
 
-    var grupos = [
-                { grupo: "França", pontos: 0 },
-                { grupo: "Brasil", pontos: 0 },
-                { grupo: "Portugal", pontos: 0 },
-                { grupo: "Inglaterra", pontos: 0 },
-                { grupo: "Alemanha", pontos: 0 },
-                { grupo: "Argentina", pontos: 0 },
-                { grupo: "Itália", pontos: 0 }       
-                ];
-
-    var gruposF = [
-                { grupo: "As Combatentes", pontos: 0 },
-                { grupo: "As Artilheiras", pontos: 0 },
-                { grupo: "As Indestrutíveis", pontos: 0 },
-                { grupo: "As Malvadas", pontos: 0 },
-                { grupo: "sem nome", pontos: 0 },
-                ];
-
-    grupos.sort(function(a, b) {
-        return b.pontos - a.pontos;
-    });
-
-    gruposF.sort(function(a, b) {
-        return b.pontos - a.pontos;
-    });
-
-    var column1 = document.querySelector("#column1");
-    var column2 = document.querySelector("#column2"); 
-    var htmlToAdd1 = "";
-    var htmlToAdd2 = "";
-
-    for (var i = 0; i < grupos.length; i++) {
-                var rank = i + 1;
-                var grupoHTML = "<p><span class='rank'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
-
-                if (i === 0) {
-                    grupoHTML = "<p><span class='rank fstplace'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
-                } else if (i === 1) {
-                    grupoHTML = "<p><span class='rank sndplace'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
-                } else if (i === 2) {
-                    grupoHTML = "<p><span class='rank tdhplace'>" + rank + ".</span> <span class='grupos'>" + grupos[i].grupo + ":</span> <span class='pontos'>" + grupos[i].pontos + " pontos</span></p>";
-                }
-
-                htmlToAdd1 += grupoHTML;
-            }
-
-            for (var i = 0; i < gruposF.length; i++) {
-                var rank = i + 1;
-                var grupoHTML = "<p><span class='rank'>" + rank + ".</span> <span class='grupos'>" + gruposF[i].grupo + ":</span> <span class='pontos'>" + gruposF[i].pontos + " pontos</span></p>";
-
-                if (i === 0) {
-                    grupoHTML = "<p><span class='rank fstplace'>" + rank + ".</span> <span class='grupos'>" + gruposF[i].grupo + ":</span> <span class='pontos'>" + gruposF[i].pontos + " pontos</span></p>";
-                } else if (i === 1) {
-                    grupoHTML = "<p><span class='rank sndplace'>" + rank + ".</span> <span class='grupos'>" + gruposF[i].grupo + ":</span> <span class='pontos'>" + gruposF[i].pontos + " pontos</span></p>";
-                } else if (i === 2) {
-                    grupoHTML = "<p><span class='rank tdhplace'>" + rank + ".</span> <span class='grupos'>" + gruposF[i].grupo + ":</span> <span class='pontos'>" + gruposF[i].pontos + " pontos</span></p>";
-                }
-
-                htmlToAdd2 += grupoHTML;
-            }
-
-            column1.innerHTML = htmlToAdd1;
-            column2.innerHTML = htmlToAdd2;
-        }
     </script>
 </body>
 </html>

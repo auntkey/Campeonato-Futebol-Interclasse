@@ -233,4 +233,7 @@ footer{
         display: flex;
         justify-content: center;
     }
+    .finais{
+        width: 400px;
+    }
 }

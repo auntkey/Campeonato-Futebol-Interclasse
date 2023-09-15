@@ -61,7 +61,7 @@ img {
 
 .placarS{
     background-color: rgb(255, 255, 255);
-    width: 450px;
+    width: 600px;
     height: 200px;
     border-radius: 15px;
     padding: 10px;
@@ -74,7 +74,7 @@ img {
     background-color: rgb(119, 218, 119);
     border-radius: 15px;
     color: black;
-    width: 25px;
+    width: 90px;
 }
 .status2{
     position: absolute;
@@ -83,7 +83,7 @@ img {
     background-color: rgb(243, 49, 49);
     border-radius: 15px;
     color: black;
-    width: 25px;
+    width: 90px;
 }
 main{
     background-color: rgb(28, 97, 6);
@@ -146,6 +146,7 @@ main{
     text-align: center;
     color: rgb(0, 0, 0);
     background: transparent;
+    
 }
 
 p{
@@ -155,6 +156,18 @@ p{
 .pontos{
     width: 12vw;
     background-color: rgb(0, 0, 0);
+    
+}
+.pontos2{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 30px;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 15px
+
     
 }
 
@@ -262,5 +275,13 @@ footer{
     p{
         display: flex;
         justify-content: center;
+    }
+
+    .placarS{
+        width: 450px;
+    }
+    .status, .status2  {
+        width: 25px;
+        color: transparent;
     }
 }

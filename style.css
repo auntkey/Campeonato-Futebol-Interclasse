@@ -233,6 +233,9 @@ footer{
         display: flex;
         justify-content: center;
     }
+    .finais{
+        width: 400px;
+    }
     .placar1{
         padding: 30px;
         width: 400px;
